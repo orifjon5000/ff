@@ -1,8 +1,6 @@
 import { Generic } from "../pages/Generic";
 import Buyurtmalar from "../pages/Buyurtmalar";
-// import Mahsulot from "../component/Mahsulotlar/Index.jsx";
-// import Kategoriya from "../component/Kategoriyalar/Index.jsx";
-// import Filial from "../component/Filial/Index.jsx"
+import Mahsulotlar from "../pages/Mahsulotlar";
 
 import { ReactComponent as buyurtmalar } from "../assets/icons/buyurtmalar.svg";
 import { ReactComponent as mahsulotlar } from "../assets/icons/mahsulotlar.svg";
@@ -23,7 +21,7 @@ export const sidebar = [
   {
     id: 2,
     title: "Mahsulotlar",
-    component: Generic,
+    component: Mahsulotlar,
     icon: mahsulotlar,
     pathname: "/Mahsulotlar",
     child: [],

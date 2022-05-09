@@ -4,7 +4,8 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 300px;
-  height: 100vh;
+  min-width: 300px;
+  height: 1000px;
   background: white;
   /* padding:0 40px ; */
   .logoWrapper {
