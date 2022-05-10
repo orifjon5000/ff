@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Navbar, AddPlus, Menu } from "./style";
+import { Container, Navbar, AddPlus, Menu,Wrapper ,Info} from "./style";
 import { card } from "../../mock/card";
 
 import { ReactComponent as First } from "../../assets/icons/menuH.svg";
@@ -19,10 +19,10 @@ export const Index = () => {
           </p>
         </AddPlus>
         <Navbar.Container>
-          <Navbar.Item isActive={isActive} >Yangi</Navbar.Item>
-          <Navbar.Item isActive={isActive}>Qabul qilingan</Navbar.Item>
-          <Navbar.Item isActive={isActive}>Jo'natilgan</Navbar.Item>
-          <Navbar.Item isActive={isActive}>Yopilgan</Navbar.Item>
+          <Navbar.Item onClick={()=>setIsActive('Yangi')} isActive={isActive==='Yangi'} >Yangi</Navbar.Item>
+          <Navbar.Item onClick={()=>setIsActive('Qabul qilingan')} isActive={isActive==='Qabul qilingan'}>Qabul qilingan</Navbar.Item>
+          <Navbar.Item onClick={()=>setIsActive('Jo\'natilgan')} isActive={isActive==='Jo\'natilgan'}>Jo'natilgan</Navbar.Item>
+          <Navbar.Item onClick={()=>setIsActive('Yopilgan')} isActive={isActive==='Yopilgan'}>Yopilgan</Navbar.Item>
         </Navbar.Container>
         <Menu>
           <Menu.H>
@@ -33,6 +33,16 @@ export const Index = () => {
           </Menu.V>
         </Menu>
       </Navbar>
+      <Wrapper>
+        {products.map(([key,value])=>(
+          value.map((item)=>(
+            <Info>
+            <h1>{item.categoria}</h1> 
+            <h1>{item.orderId}</h1>
+            </Info>
+          ))
+        ))}
+      </Wrapper>
     </Container>
   );
 };

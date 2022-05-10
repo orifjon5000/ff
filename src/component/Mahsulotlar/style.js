@@ -2,22 +2,19 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 1620px;
-  height: 70px;
-  background: white;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  background:   height: 70px;
+;
 `;
 
 export const Navbar = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-content:flex-start ;
+  align-items: center;
+  height: 70px;
+  background: white ;
 `;
 
 export const AddPlus = styled.div`
   display: flex;
-  flex-grow: 1;
   align-items: center;
   justify-content: center;
   border-right: 2px solid #edeff3;
@@ -36,9 +33,8 @@ export const AddPlus = styled.div`
 
 Navbar.Container = styled.div`
   display: flex;
-  flex:1 ;
-  width: 680px;
-  padding: 0 20px;   
+  /* width: 680px; */
+  padding: 0 20px;
   align-items: center;
   justify-content: center;
   height: 52px;
@@ -52,14 +48,17 @@ Navbar.Item = styled.div`
   height: 38px;
   align-items: center;
   justify-content: center;
-  background: #ffffff;
-  box-shadow: 0px 2px 2px rgba(174, 176, 181, 0.314986);
+  background: ${({ isActive }) => (isActive ? "#ffffff" : "#edeff3")};
+  box-shadow: ${({ isActive }) =>
+    isActive ? "0px 2px 2px rgba(174, 176, 181, 0.314986)" : "none"};
   border-radius: 18px;
+  cursor: pointer;
+  transition: 0.3s all ease;
 `;
 
 export const Menu = styled.div`
   display: flex;
-  margin-top: 7px;  
+  margin-top: 7px;
   width: 70px;
   height: 35px;
   background: #edeff3;
@@ -98,4 +97,18 @@ Menu.V = styled.div`
   } */
   border-radius: 50%;
   cursor: pointer;
+`;
+
+export const Info =styled.div`
+display:flex ;
+width:100%;
+margin:10px 0;
+background:white ;
+padding:20px 50px;
+height: fit-content ;
+`
+export const Wrapper=styled.div` 
+display:flex;
+flex-direction:column;
+margin:0 10px;
 `;
