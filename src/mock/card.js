@@ -1,4 +1,6 @@
+const today=new Date()
 export const card = {
+
   yangi: [
     {
       id: 1,
@@ -45,7 +47,7 @@ export const card = {
       categoria: 'qabul',
 
       orderId: 1234,
-      time: new Date(),
+      time: today.getHours(),
       total: '40000',
       user: {
         name: 'Ikrom ',
@@ -64,7 +66,7 @@ export const card = {
       categoria: 'qabul',
 
       orderId: 56789,
-      time: new Date(),
+      time: today.getHours(),
       total: '40000',
       user: {
         name: 'Gulbashakar Joe',
@@ -85,7 +87,7 @@ export const card = {
       categoria: 'jonatilgan',
 
       orderId: 1234,
-      time: new Date(),
+      time: today.getHours(),
       total: '40000',
       user: {
         name: 'Gulbashakar Gulshakar',
@@ -106,7 +108,7 @@ export const card = {
       categoria: 'yopilgan',
 
       orderId: 1234,
-      time: new Date(),
+      time: today.getHours(),
       total: '40000',
       user: {
         name: 'Gulbashakar Gulshakar',
@@ -125,7 +127,7 @@ export const card = {
       categoria: 'yopilgan',
 
       orderId: 56789,
-      time: new Date(),
+      time: today.getHours(),
       total: '40000',
       user: {
         name: 'Gulbashakar Joe',
