@@ -27,6 +27,8 @@ export const Index = ({ isActive }) => {
                   </pi>
                 </Order>
                 {/* order */}
+
+
                 <User className="box">
                   <block>
                     <img src={user} alt="user" /> {item.user.name}
@@ -34,37 +36,42 @@ export const Index = ({ isActive }) => {
                   <span>{item.user.phone}</span>
                 </User>
                 {/* user */}
+
+
                 <Payme className="box">
                   <p>
                     Umumiy summa:
-                    <br />
                     <i>{item.total}</i>
                   </p>
                   <pi>
-                    <span></span> Payme
+                  <div className="bgtext"></div>
+                   <p>payme</p>
                   </pi>
                 </Payme>
                 {/* payme */}
-                <Save >
-                  <div>
+
+
+                <Save  >
+                  <div className="save">
                     <p>
-                      <span>operator:</span> {item.operator.name}
+                      <span>operator:</span> <h4 style={{width:'100px'}}>{item.operator.name}</h4>
                     </p>
-                    <button>
-                      <img src={cancel} alt="" />
-                    </button>
-                  </div>
-                  <div>
                     <p>
-                      {item.filial.title}
-                      {item.filial.location}
+                    <span>filial:</span>
+                     <h4 style={{width:'200px'}}> {item.filial.title}
+                      {item.filial.location}</h4>
                     </p>{" "}
-                    <button>
-                      <img style={{ width: "12px" }} src={done} alt="" />
-                    </button>
+                    
+                  </div>
+                  <div className="imgsave">
+                    
+                    <img src={cancel} style={{marginTop:'20px'}} alt="" />
+                      <img  className="img2" src={done} alt="" />
                   </div>
                 </Save>
                 {/* save */}
+
+
               </Info>
             ))
         )}
