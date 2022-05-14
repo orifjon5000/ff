@@ -3,13 +3,14 @@ import { Container, Navbar, AddPlus, Menu,Wrapper ,Info} from "./style";
 import { card } from "../../mock/card";
 import Flex from './Flex'
 import Grid from './Grid'
-import { ReactComponent as First } from "../../assets/icons/menuH.svg";
-import { ReactComponent as Second } from "../../assets/icons/menuV.svg";
+import { ReactComponent as MenuH } from "../../assets/icons/menuH.svg";
+import { ReactComponent as MenuV } from "../../assets/icons/menuV.svg";
 
 
 export const Index = () => {
   const [products, setProducts] = useState(Object.entries(card));
   const [isActive,setIsActive] = useState('Yangi')
+  const [isGrid,setGrid] = useState(false)
   return (
     <Container>
       <Navbar>
@@ -26,18 +27,18 @@ export const Index = () => {
           <Navbar.Item onClick={()=>setIsActive('Jonatilgan')} isActive={isActive==='Jonatilgan'}>Jo'natilgan</Navbar.Item>
           <Navbar.Item onClick={()=>setIsActive('Yopilgan')} isActive={isActive==='Yopilgan'}>Yopilgan</Navbar.Item>
         </Navbar.Container>
-        <Menu>
-          <Menu.H>
-            <First />
+        <Menu  onClick={()=>setGrid(true)} >
+          <Menu.H   isactive={isGrid}>
+            <MenuH  isactive={isGrid}/>
           </Menu.H>
-          <Menu.V>    
-            <Second />
+          <Menu.V  isactive={!isGrid}  >    
+            <MenuV  isactive={isGrid}/>
           </Menu.V>
         </Menu>
       </Navbar>
       <div>
-        <Flex isActive={isActive}/>
         <Grid />
+        <Flex isActive={isActive}/>
       </div>
     </Container>
   );
