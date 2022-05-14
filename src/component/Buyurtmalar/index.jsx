@@ -1,87 +1,44 @@
 import React, { useState } from "react";
-import Save from "../../assets/icons/save.svg";
-import Clock from "../../assets/icons/clock.svg";
-import UserI from "../../assets/icons/user.svg";
-import Done from "../../assets/icons/done.svg";
-import Cancel from "../../assets/icons/cancel.svg";
-
-import {
-  Container,
-  Wrapper,
-  Order,
-  Pay,
-  User,
-  Card,
-  Location,
-  Title,
-} from "./style";
+import { Container, Navbar, AddPlus, Menu,Wrapper ,Info} from "./style";
 import { card } from "../../mock/card";
+import Flex from './Flex'
+import Grid from './Grid'
+import { ReactComponent as First } from "../../assets/icons/menuH.svg";
+import { ReactComponent as Second } from "../../assets/icons/menuV.svg";
+
+
 export const Index = () => {
   const [products, setProducts] = useState(Object.entries(card));
+  const [isActive,setIsActive] = useState('Yangi')
   return (
     <Container>
-      <Wrapper>
-        {products.map(([name, data]) => (
-          <Wrapper.Column>
-            <Title>
-              {" "}
-              <h4>{name}</h4>
-            </Title>
-            {data.map((value) => (
-              <Card>
-                <Order className="flex-row">
-                  {" "}
-                  <div className="flex-row  orderId">
-                    <p className="flex-row">{value.orderId}</p>
-                    <div className="imgsave">
-                      <img src={Save} alt="save" />
-                    </div>{" "}
-                  </div>
-                  <div className="flex-row orderClock">
-                    <img src={Clock} alt="Clock" />
-                    <p>00:24</p>
-                  </div>
-                </Order>
-
-                <User className="flex-column">
-                  <div className="flex-row userName">
-                    <img src={UserI} alt="User" />
-                    <h4>{value.user.name}</h4>
-                  </div>
-                  <p> {value.user.phone}</p>
-                </User>
-
-                <Pay className="flex-row">
-                  <div className="payTotal">
-                    <p>Umumiy summa:</p>
-                    <p>{value.total} UZS</p>
-                  </div>
-                  <div className="iconpay"></div>
-                  <span>Payme</span>
-                </Pay>
-
-                <Location className="flex-row">
-                  <div>
-                    <div>
-                      <p>operator:</p>
-                      <h4>{value.operator.name}</h4>
-                    </div>
-                    <div>
-                      <p>Manzil:</p>
-                      <h4>{value.filial.location}</h4>
-                    </div>
-                  </div>
-                  <div className=" flex-column">
-                  <img className="imgSave" src={Done} alt="Done" />
-                  <img src={Cancel} className="imgSave" alt="Cancel" />
-                </div>
-                </Location>
-               
-              </Card>
-            ))}
-          </Wrapper.Column>
-        ))}
-      </Wrapper>
+      <Navbar>
+        <AddPlus>
+          <span>+</span>
+          <p>
+            Yangi buyurtma <br />
+            qo'shish
+          </p>
+        </AddPlus>
+        <Navbar.Container>
+          <Navbar.Item onClick={()=>setIsActive('Yangi')} isActive={isActive==='Yangi'} >Yangi</Navbar.Item>
+          <Navbar.Item onClick={()=>setIsActive('Qabul')} isActive={isActive==='Qabul'}>Qabul qilingan</Navbar.Item>
+          <Navbar.Item onClick={()=>setIsActive('Jonatilgan')} isActive={isActive==='Jonatilgan'}>Jo'natilgan</Navbar.Item>
+          <Navbar.Item onClick={()=>setIsActive('Yopilgan')} isActive={isActive==='Yopilgan'}>Yopilgan</Navbar.Item>
+        </Navbar.Container>
+        <Menu>
+          <Menu.H>
+            <First />
+          </Menu.H>
+          <Menu.V>    
+            <Second />
+          </Menu.V>
+        </Menu>
+      </Navbar>
+      <div>
+        <Flex isActive={isActive}/>
+        <Grid />
+      </div>
     </Container>
   );
 };
