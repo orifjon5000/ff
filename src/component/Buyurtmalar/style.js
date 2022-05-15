@@ -1,17 +1,15 @@
-
 import styled from "styled-components";
 
 export const Container = styled.div`
   width: 1620px;
-  height: 70px;
-;
+  height: 70px; ;
 `;
 
 export const Navbar = styled.div`
   display: flex;
   align-items: center;
   height: 70px;
-  background: white ;
+  background: white;
 `;
 
 export const AddPlus = styled.div`
@@ -41,6 +39,9 @@ Navbar.Container = styled.div`
   height: 52px;
   background: #edeff3;
   border-radius: 24px;
+  opacity: ${({ isActive }) => (!isActive ? 0.3 : 1)};
+  cursor: ${({ isActive }) => (!isActive ? "not-allowed" : "pointer")};
+
 `;
 Navbar.Item = styled.div`
   display: flex;
@@ -53,8 +54,9 @@ Navbar.Item = styled.div`
   box-shadow: ${({ isActive }) =>
     isActive ? "0px 2px 2px rgba(174, 176, 181, 0.314986)" : "none"};
   border-radius: 18px;
-  cursor: pointer;
+  cursor: inherit;
   transition: 0.3s all ease;
+
 `;
 
 export const Menu = styled.div`
@@ -65,6 +67,8 @@ export const Menu = styled.div`
   background: #edeff3;
   border-radius: 24px;
   margin-left: 20px;
+  align-items: center;
+  justify-content: center;
 `;
 
 Menu.H = styled.div`
@@ -77,8 +81,10 @@ Menu.H = styled.div`
   width: 40px;
   border-radius: 50%;
   cursor: pointer;
- background: ${({ isactive }) => isactive && "white"};
- 
+  background: ${({ isactive }) => isactive && "white"};
+  .MenuH {
+    fill: ${({ isactive }) => isactive && "#8d9bA8"};
+  }
 `;
 Menu.V = styled.div`
   cursor: pointer;
@@ -90,22 +96,25 @@ Menu.V = styled.div`
   /* margin-left: 3px; */
   margin-right: 5px;
   width: 40px;
-   background: ${({ isactive }) => isactive && "white"};
+  background: ${({ isactive }) => isactive && "white"};
+  .MenuV {
+    fill: ${({ isactive }) => isactive && "#8d9bA8"};
+  }
 
   border-radius: 50%;
   cursor: pointer;
 `;
 
-export const Info =styled.div`
-display:flex ;
-width:100%;
-margin:10px 0;
-background:white ;
-padding:20px 50px;
-height: fit-content ;
-`
-export const Wrapper=styled.div` 
-display:flex;
-flex-direction:column;
-margin:0 10px;
+export const Info = styled.div`
+  display: flex;
+  width: 100%;
+  margin: 10px 0;
+  background: white;
+  padding: 20px 50px;
+  height: fit-content;
+`;
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
 `;
