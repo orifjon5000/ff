@@ -5,6 +5,14 @@ export const Container = styled.div`
   height: 70px; ;
 `;
 
+export const Drawer =styled.div`
+width: 300px;
+height: 100vh;
+background: red;
+position: absolute;
+right: 800px;
+z-index:999
+`
 export const Navbar = styled.div`
   display: flex;
   align-items: center;

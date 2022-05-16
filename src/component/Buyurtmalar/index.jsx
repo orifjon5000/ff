@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Navbar, AddPlus, Menu,Wrapper ,Info} from "./style";
+import { Container, Navbar, AddPlus,Drawer, Menu,Wrapper ,Info} from "./style";
 import { card } from "../../mock/card";
 import Flex from './Flex'
 import Grid from './Grid'
@@ -17,6 +17,7 @@ export const Index = () => {
   }
   return (
     <Container>
+      <Drawer/>
       <Navbar>
         <AddPlus>
           <span>+</span>
