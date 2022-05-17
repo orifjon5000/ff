@@ -144,41 +144,40 @@ export const Save = styled.div`
   justify-content: space-around;
   align-items: center;
   margin-top: -40px;
-  
-  .save , .imgsave{
+
+  .save,
+  .imgsave {
     display: flex;
     justify-content: baseline;
-    margin-top: 20px ;
+    margin-top: 20px;
     flex-direction: column;
     span {
       font-family: sans-serif;
       font-weight: 500;
       font-size: 15px;
-      opacity: .6;
+      opacity: 0.6;
       letter-spacing: 0.366667px;
-      line-height:30px;
+      line-height: 30px;
     }
     p {
       font-family: sans-serif;
       color: #2d3a45;
-      
     }
-    .imgsave{
+    .imgsave {
       position: relative;
-    left: 100px;
+      left: 100px;
     }
-    img{
+    img {
       border-radius: 50%;
-    border: 3px solid #edeff3;
-    background: white;
-    width: 30px;
-    padding: 2px;
-    position: relative;
-    right: -88px;
+      border: 3px solid #edeff3;
+      background: white;
+      width: 30px;
+      padding: 2px;
+      position: relative;
+      right: -88px;
     }
-    .img2{
-      margin-top:50px
+    .img2 {
+      margin-top: 50px;
     }
-    
   }
 `;
