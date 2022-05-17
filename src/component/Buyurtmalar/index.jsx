@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Container, Navbar, AddPlus,Drawer, Menu,Wrapper ,Info} from "./style";
+import { Container, Navbar, AddPlus, Menu,Wrapper ,Info} from "./style";
 import { card } from "../../mock/card";
 import Flex from './Flex'
 import Grid from './Grid'
+import Drawer from "./Drawer/Drawer";
 import { ReactComponent as MenuH } from "../../assets/icons/menuH.svg";
 import { ReactComponent as MenuV } from "../../assets/icons/menuV.svg";
 
