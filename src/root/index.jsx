@@ -7,7 +7,7 @@ import Buyurtmalar from '../component/Buyurtmalar'
 import '../'
 function Index() {
     return (
-        <Container >
+        <Container  >
         <BrowserRouter>
         <Sidebar/>
        <Wrapper>

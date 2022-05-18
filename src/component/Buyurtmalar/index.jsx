@@ -16,8 +16,8 @@ export const Index = () => {
   };
   return (
     <Container>
-      <Drawer />
       <Navbar>
+      <Drawer>hi drawer</Drawer>
         <AddPlus
           class="btn btn-primary"
           type="button"

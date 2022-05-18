@@ -145,12 +145,14 @@ export const Save = styled.div`
   align-items: center;
   margin-top: -40px;
 
-  .save,
+  .savee,
   .imgsave {
     display: flex;
     justify-content: baseline;
     margin-top: 20px;
     flex-direction: column;
+  width: 570px;
+
     span {
       font-family: sans-serif;
       font-weight: 500;
@@ -163,10 +165,7 @@ export const Save = styled.div`
       font-family: sans-serif;
       color: #2d3a45;
     }
-    .imgsave {
-      position: relative;
-      left: 100px;
-    }
+ 
     img {
       border-radius: 50%;
       border: 3px solid #edeff3;

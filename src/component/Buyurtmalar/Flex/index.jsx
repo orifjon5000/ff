@@ -52,7 +52,7 @@ export const Index = ({ isActive }) => {
 
 
                 <Save  >
-                  <div className="save">
+                  <div className="savee">
                     <p>
                       <span>operator:</span> <h4 style={{width:'100px'}}>{item.operator.name}</h4>
                     </p>
