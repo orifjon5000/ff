@@ -1,6 +1,7 @@
 import { Generic } from "../pages/Generic";
 import Buyurtmalar from "../pages/Buyurtmalar";
 import Mahsulotlar from "../pages/Mahsulotlar";
+import Kategoriya from '../pages/Kategoriyalar'
 
 import { ReactComponent as buyurtmalar } from "../assets/icons/buyurtmalar.svg";
 import { ReactComponent as mahsulotlar } from "../assets/icons/mahsulotlar.svg";
@@ -30,7 +31,7 @@ export const sidebar = [
   {
     id: 3,
     title: "Kategoriyalar",
-    component: Generic,
+    component: Kategoriya,
     icon: kategoriya,
     pathname: "/Kategoriyalar",
     child: [],
