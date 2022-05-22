@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { list } from "../../mock/mahsulotlar.js";
-import Drawer from "../Buyurtmalar/Drawer/Drawer";
+// import Drawer from "../Drawer/Drawer";
 import { Container, Wrapper, Info, Navbar } from "./style";
 
 export const Mahsulotlar = () => {
@@ -13,7 +13,7 @@ export const Mahsulotlar = () => {
   return (
     <Container open={open}>
       <Navbar>
-        <Drawer open={open} onClos={onClose}>
+        {/* <Drawer open={open} onClos={onClose}>
           <form action="">
             <h2>Yangi Kategoriya Qo'shish</h2>
             <label htmlFor="text">Kategoriya nomi uz</label>
@@ -30,7 +30,7 @@ export const Mahsulotlar = () => {
           </select>
 
           <button>Saqlash</button>
-        </Drawer>
+        </Drawer> */}
         <Navbar.Item onClick={() => setOpen(!open)}>
           {open ? "close" : "open"}
         </Navbar.Item>

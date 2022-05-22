@@ -3,23 +3,28 @@ import { Container, Navbar, AddPlus, Menu, Wrapper, Info } from "./style";
 import { card } from "../../mock/card";
 import Flex from "./Flex";
 import Grid from "./Grid";
-import Drawer from "./Drawer/Drawer";
+// import Drawer from "../Drawer/Drawer";
+import Drawer  from "../Buyurtmalar/Drawer/Drawer";
 import { ReactComponent as MenuH } from "../../assets/icons/menuH.svg";
 import { ReactComponent as MenuV } from "../../assets/icons/menuV.svg";
 
-export const Index = () => {
+export const Index = ({value}) => {
   const [products, setProducts] = useState(Object.entries(card));
   const [isActive, setIsActive] = useState("Yangi");
   const [isGrid, setGrid] = useState(false);
   const onCHange = (title) => {
     isGrid && setIsActive(title);
   };
+
+
   return (
     <Container>
+      <Drawer value={value} style={{width:'350px'}}>
+
+      </Drawer>
       <Navbar>
-      <Drawer>hi drawer</Drawer>
-        <AddPlus
-          class="btn btn-primary"
+        <AddPlus 
+          // class="btn btn-primary"
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasRight"
