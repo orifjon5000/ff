@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Navbar, AddPlus, Menu, Wrapper, Info } from "./style";
 import { card } from "../../mock/card";
 import Flex from "./Flex";
@@ -12,11 +12,17 @@ export const Index = ({value}) => {
   const [products, setProducts] = useState(Object.entries(card));
   const [isActive, setIsActive] = useState("Yangi");
   const [isGrid, setGrid] = useState(false);
+  const [isLoading, setLoading] = useState(true);
   const onCHange = (title) => {
     isGrid && setIsActive(title);
   };
-
-
+useEffect(()=>{
+  fetch('https://jsonplaceholder.typicode.com/photos')
+  .then(response => response.json())
+  .then((json) => {console.log(json);setLoading(false)})
+},[])
+if(isLoading)return <h1>Loading</h1>;
+else
   return (
     <Container>
       <Drawer value={value} style={{width:'350px'}}>
