@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {  Order, User, Payme, Save, Info } from "./style";
 import save from "../../../assets/icons/save.svg";
 import done from "../../../assets/icons/done.svg";
 import cancel from "../../../assets/icons/cancel.svg";
 import clock from "../../../assets/icons/clock.svg";
 import user from "../../../assets/icons/user.svg";
-export default function ({item}) {
+export default function ({item,ondelete}) {
+
+ 
+
   return (
     <Info>
         {/* <Drawer/> */}
@@ -20,10 +23,9 @@ export default function ({item}) {
     </Order>
     {/* order */}
 
-
     <User className="box">
       <block>
-        <img src={user} alt="user" /> {item.user.name}
+        <img src={user} alt="user"  /> {item.user.name}
       </block>
       <span>{item.user.phone}</span>
     </User>
@@ -57,7 +59,7 @@ export default function ({item}) {
       </div>
       <div className="imgsave" >
         
-        <img src={cancel} style={{marginTop:'20px'}} alt=""    />
+        <img src={cancel} style={{marginTop:'20px'}} alt=""  onClick={()=>ondelete(item.id)}  />
           <img  className="img2" src={done} alt="" />
       </div>
     </Save>

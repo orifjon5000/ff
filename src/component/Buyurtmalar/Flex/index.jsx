@@ -9,13 +9,15 @@ import user from "../../../assets/icons/user.svg";
 import Card from "./Card";
 export const Index = ({ isActive }) => {
   const [products, setProducts] = useState(Object.entries(card));
+  
   return (
     <Container>
       <Wrapper>
         {products.map(([key, value]) =>
-          value
+       
+            value
             .filter((a) => a.categoria === isActive.toLocaleLowerCase())
-            .map((item) => <Card item={item} />))}
+            .map((item) => <Card item={item}/>))}
       </Wrapper>
     </Container>
   );

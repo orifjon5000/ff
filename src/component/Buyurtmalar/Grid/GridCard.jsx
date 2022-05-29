@@ -14,7 +14,7 @@ import {
 } from "./style";
 import InfoCard from './InfoCard/index'
 
-export default function GridCard({value}) {
+export default function GridCard({value,onDelete}) {
     
     const [open,setOpen] =useState(false)
   return (
@@ -64,7 +64,7 @@ export default function GridCard({value}) {
                     </div>
                     <div className=" flex-column">
                       <img className="imgSave" src={Done} alt="Done"  type="button"/>
-                      <img src={Cancel} className="imgSave" alt="Cancel" />
+                      <img src={Cancel} className="imgSave" alt="Cancel" onClick={()=>onDelete(value.id)} />
                       <button onClick={()=>setOpen(!open)}>edit</button>
                     </div>
                   </Location>

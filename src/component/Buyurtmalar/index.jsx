@@ -19,12 +19,7 @@ export const Index = ({value}) => {
   const onCHange = (title) => {
     isGrid && setIsActive(title);
   };
-// useEffect(()=>{
-//   fetch('https://jsonplaceholder.typicode.com/photos')
-//   .then(response => response.json())
-//   .then((json) => {console.log(json);setLoading(false)})
-// },[])
-// if(isLoading)return <h1>Loading</h1>;
+
   return (
   <Suspense fallback={<h1>data keguncha kutish...</h1>}>
       <Container>
