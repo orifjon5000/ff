@@ -1,8 +1,10 @@
 import styled from "styled-components";
-
+ 
 export const Container = styled.div`
   width: 1620px;
-  height: 70px; ;
+  height: 70px; 
+
+
 `;
 
 export const Drawer =styled.div`
