@@ -7,7 +7,7 @@ import { newcard } from "../../../mock/card";
 export const Index = () => {
   const [product, setProduct] = useState(newcard);
 
-  const filter = ["yangi", "qabul", "jonatilgan", "yopilgan"];
+  const ArrCategory = ["yangi", "qabul", "jonatilgan", "yopilgan"];
 
   const onDelete = (id) => {
     console.log(id, "id");
@@ -18,7 +18,7 @@ export const Index = () => {
   return (
     <Container>
       <Wrapper>
-        {filter.map((item) => (
+        {ArrCategory.map((item) => (
           <Wrapper.Column>
             <h3>{item} {product
               .filter((f) => f.categoria === item).length}</h3>
