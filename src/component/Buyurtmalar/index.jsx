@@ -75,7 +75,7 @@ export const Index = ({value}) => {
           </Menu.V>
         </Menu>
       </Navbar>
-      <div>{isGrid ? <Flex isActive={isActive} /> : <Grid />}</div>
+      <div>{isGrid ? <Flex isActive={isActive} /> : <Grid isActive={isActive}/>}</div>
     </Container>
   </Suspense>
   );
