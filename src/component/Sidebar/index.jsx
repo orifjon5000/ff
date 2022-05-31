@@ -42,8 +42,8 @@ export const Generic = (props) => {
           </div>
         </NavLink>
       ))}
-      <div className="logout">
-        <img src={logout} className="logoutImg" alt='logout'/> <p>exit</p>
+      <div className="logout ">
+        <img src={logout} className="logoutImg" alt='logout'/> <p>Exit</p>
       </div>
     </Container>
   );

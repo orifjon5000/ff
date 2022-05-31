@@ -66,5 +66,9 @@ color: #2D3A45;
     display: flex;
     margin-left: 40px;
     align-items: center;
+    p{
+      margin:0;
+      
+    }
   }
 `;
