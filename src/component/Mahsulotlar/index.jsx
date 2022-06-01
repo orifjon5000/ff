@@ -1,16 +1,22 @@
 import React, { useState } from "react";
-import { Container, Navbar, AddPlus, Menu,Wrapper ,Info} from "./style";
+import { Container, Title} from "./style";
 import { card } from "../../mock/card";
-
-import { ReactComponent as First } from "../../assets/icons/menuH.svg";
-import { ReactComponent as Second } from "../../assets/icons/menuV.svg";
+import Navbar from './Navbar/Navbar.jsx'
 
 export const Index = () => {
   const [products, setProducts] = useState(Object.entries(card));
   const [isActive,setIsActive] = useState('Yangi')
   return (
     <Container>
-     d
+     <Navbar/>
+
+    <Title className="flex-row">
+      <p>Mahsulot</p>
+      <p>Turi</p>
+      <p>Narxi</p>
+      <p>Qo'shimcha</p>
+      <p>Tahrirlash</p> 
+    </Title>
     </Container>
   );
 };
