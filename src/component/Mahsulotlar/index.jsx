@@ -17,6 +17,8 @@ export const Index = () => {
       <p>Qo'shimcha</p>
       <p>Tahrirlash</p> 
     </Title>
+
+    
     </Container>
   );
 };
