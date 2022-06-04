@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container, Title} from "./style";
 import { list } from "../../mock/mahsulotlar.js";
 import Navbar from './Navbar/Navbar.jsx'
+import {HiOutlinePencil ,HiOutlineTrash} from 'react-icons/hi'
 
 export const Index = () => {
   const [isActive,setIsActive] = useState('Yangi')
@@ -20,11 +21,11 @@ export const Index = () => {
 {
   product.map((value)=>(
     <div key= {value.id}>
-      {value.img}
       {value.mahsulot}
-      {value.birnima}
       {value.price}
       {value.kategoriya}
+      <HiOutlinePencil/>
+      <HiOutlineTrash/>
     </div>
   ))
 }
