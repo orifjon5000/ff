@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Container, Title} from "./style";
-import { card } from "../../mock/card";
+import { list } from "../../mock/mahsulotlar.js";
 import Navbar from './Navbar/Navbar.jsx'
 
 export const Index = () => {
-  const [products, setProducts] = useState(Object.entries(card));
   const [isActive,setIsActive] = useState('Yangi')
+  const [product,setProduct] =useState(list)
   return (
     <Container>
      <Navbar/>
@@ -17,8 +17,18 @@ export const Index = () => {
       <p>Qo'shimcha</p>
       <p>Tahrirlash</p> 
     </Title>
+{
+  product.map((value)=>(
+    <div key= {value.id}>
+      {value.img}
+      {value.mahsulot}
+      {value.birnima}
+      {value.price}
+      {value.kategoriya}
+    </div>
+  ))
+}
 
-    
     </Container>
   );
 };
