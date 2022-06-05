@@ -9,7 +9,7 @@ export const Title = styled.div`
   margin-bottom: 20px;
   height: 36px;
   background: white;
-  p:nth-child(1){
+  p:nth-child(1) {
     border: none;
   }
   p {
@@ -24,6 +24,14 @@ export const Title = styled.div`
     padding-left: 20px;
     border-left: 2px solid rgba(0, 0, 0, 0.2);
     color: #2d3a45;
-    margin-bottom:0px;
+    margin-bottom: 0px;
   }
+`;
+
+export const Wrapper = styled.div`
+  background: white;
+  margin: 15px;
+  border-radius: 6px;
+  height: 36px;
+  font-family: sans-serif;
 `;

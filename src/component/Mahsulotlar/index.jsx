@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Title} from "./style";
+import { Container,Title, Wrapper} from "./style";
 import { list } from "../../mock/mahsulotlar.js";
 import Navbar from './Navbar/Navbar.jsx'
 import {HiOutlinePencil ,HiOutlineTrash} from 'react-icons/hi'
@@ -20,13 +20,13 @@ export const Index = () => {
     </Title>
 {
   product.map((value)=>(
-    <div key= {value.id}>
+    <Wrapper key= {value.id}>
       {value.mahsulot}
       {value.price}
       {value.kategoriya}
       <HiOutlinePencil/>
       <HiOutlineTrash/>
-    </div>
+    </Wrapper>
   ))
 }
 
