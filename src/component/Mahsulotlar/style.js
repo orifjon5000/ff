@@ -34,4 +34,10 @@ export const Wrapper = styled.div`
   border-radius: 6px;
   height: 36px;
   font-family: sans-serif;
+  justify-content: start;
+  
 `;
+Wrapper.Column=styled.div` 
+width:300px;
+justify-content: center;
+`
