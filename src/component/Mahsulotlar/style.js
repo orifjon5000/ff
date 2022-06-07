@@ -25,6 +25,8 @@ export const Title = styled.div`
     border-left: 2px solid rgba(0, 0, 0, 0.2);
     color: #2d3a45;
     margin-bottom: 0px;
+    margin-left: 18px;
+
   }
 `;
 
@@ -35,9 +37,16 @@ export const Wrapper = styled.div`
   height: 36px;
   font-family: sans-serif;
   justify-content: start;
-  
 `;
-Wrapper.Column=styled.div` 
-width:300px;
-justify-content: center;
-`
+Wrapper.Column = styled.div`
+  width: 300px;
+  justify-content: center;
+  margin-left: 24px;
+  
+  img {
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+  }
+`;

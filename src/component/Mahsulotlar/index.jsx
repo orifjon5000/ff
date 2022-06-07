@@ -20,7 +20,8 @@ export const Index = () => {
       </Title>
       {product.map((value) => (
         <Wrapper className="flex-row" key={value.id}>
-          <Wrapper.Column> {value.mahsulot}</Wrapper.Column>
+         
+          <Wrapper.Column> <img src={value.img} alt="" />{value.mahsulot}</Wrapper.Column>
           <Wrapper.Column>{value.price}</Wrapper.Column>
           <Wrapper.Column> {value.price}</Wrapper.Column>
           <Wrapper.Column>{value.kategoriya}</Wrapper.Column>
