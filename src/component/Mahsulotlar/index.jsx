@@ -21,12 +21,14 @@ export const Index = () => {
       {product.map((value) => (
         <Wrapper className="flex-row" key={value.id}>
          
-          <Wrapper.Column> <img src={value.img} alt="" />{value.mahsulot}</Wrapper.Column>
+          <Wrapper.Column style={{width:'365px'}}> <img src={value.img} alt="" />{value.mahsulot}</Wrapper.Column>
           <Wrapper.Column>{value.price}</Wrapper.Column>
           <Wrapper.Column> {value.price}</Wrapper.Column>
           <Wrapper.Column>{value.kategoriya}</Wrapper.Column>
-          <HiOutlinePencil />
+          <Wrapper.Column style={{width:'365px'}}>
+          <HiOutlinePencil className="ss" />
           <HiOutlineTrash />
+          </Wrapper.Column>
         </Wrapper>
       ))}
     </Container>

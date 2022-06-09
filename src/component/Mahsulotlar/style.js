@@ -20,33 +20,36 @@ export const Title = styled.div`
     line-height: 13px;
     height: 36px;
     text-transform: uppercase;
-    flex: 1;
-    padding-left: 20px;
+    width: 405px;
+    padding-left: 40px;
     border-left: 2px solid rgba(0, 0, 0, 0.2);
     color: #2d3a45;
     margin-bottom: 0px;
-    margin-left: 18px;
-
   }
 `;
 
 export const Wrapper = styled.div`
   background: white;
-  margin: 15px;
+  margin: 25px 40px;
   border-radius: 6px;
   height: 36px;
   font-family: sans-serif;
   justify-content: start;
 `;
 Wrapper.Column = styled.div`
-  width: 300px;
+  width:  405px;
   justify-content: center;
-  margin-left: 24px;
-  
+  box-sizing: border-box;
+  padding-left: 30px;
+  border: 1px solid black;
+
   img {
     border-radius: 50%;
     width: 28px;
     height: 28px;
     margin-right: 8px;
+  }
+  .ss {
+    margin-left: 43px;
   }
 `;
