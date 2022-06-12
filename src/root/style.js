@@ -5,4 +5,4 @@ display:flex;
 margin:0 auto;
 `
 export const Wrapper= styled.div`
-margin:0 50 px` 
+margin:0 ` 

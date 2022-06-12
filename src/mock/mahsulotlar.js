@@ -1,5 +1,7 @@
 import React from "react";
 
+import { HiOutlinePencil, HiOutlineTrash } from "react-icons/hi";
+
 import img from '../assets/image/Bitmap.png';
 
 export const list =[ {
@@ -9,8 +11,8 @@ export const list =[ {
   kategoriya:'Lavash',
   price:"18,000 UZS",
   format:'kichkina',
-  action: <i class="fas fa-pencil-alt"></i>,
-  birnima: <i class="far fa-trash-alt"></i>
+  action: <HiOutlinePencil/>,
+  birnima: <HiOutlineTrash/>
 },
 
 {
@@ -20,8 +22,8 @@ export const list =[ {
   kategoriya:'shashlik',
   price:"18,000 UZS",
   format:'kichkina',
-  action: <i class="fas fa-pencil-alt"></i>,
-  birnima: <i class="far fa-trash-alt"></i>
+  action: <HiOutlinePencil/>,
+  birnima: <HiOutlineTrash/>
 },
 {
   id:3,
@@ -30,8 +32,8 @@ export const list =[ {
   kategoriya:'chizburger',
   price:"18,000 UZS",
   format:'kichkina',
-  action: <i class="fas fa-pencil-alt"></i>,
-  birnima: <i class="far fa-trash-alt"></i>
+  action: <HiOutlinePencil/>,
+  birnima: <HiOutlineTrash/>
 },
 {
   id:4,
@@ -40,8 +42,8 @@ export const list =[ {
   kategoriya:'osh',
   price:"18,000 UZS",
   format:'kichkina',
-  action: <i class="fas fa-pencil-alt"></i>,
-  birnima: <i class="far fa-trash-alt"></i>
+  action: <HiOutlinePencil/>,
+  birnima: <HiOutlineTrash/>
 },
 {
   id:5,
@@ -50,8 +52,8 @@ export const list =[ {
   kategoriya:'Lavash',
   price:"18,000 UZS",
   format:'kichkina',
-  action: <i class="fas fa-pencil-alt"></i>,
-  birnima: <i class="far fa-trash-alt"></i>
+  action: <HiOutlinePencil/>,
+  birnima: <HiOutlineTrash/>
 },
 {
   id:6,
@@ -60,8 +62,8 @@ export const list =[ {
   kategoriya:'Lavash',
   price:"18,000 UZS",
   format:'kichkina',
-  action: <i class="fas fa-pencil-alt"></i>,
-  birnima: <i class="far fa-trash-alt"></i>
+  action: <HiOutlinePencil/>,
+  birnima: <HiOutlineTrash/>
 },
 {
   id:7,
@@ -70,8 +72,8 @@ export const list =[ {
   kategoriya:'Lavash',
   price:"18,000 UZS",
   format:'kichkina',
-  action: <i class="fas fa-pencil-alt"></i>,
-  birnima: <i class="far fa-trash-alt"></i>
+  action: <HiOutlinePencil/>,
+  birnima: <HiOutlineTrash/>
 },
 {
   id:8,
@@ -80,8 +82,8 @@ export const list =[ {
   kategoriya:'Lavash',
   price:"18,000 UZS",
   format:'kichkina',
-  action: <i class="fas fa-pencil-alt"></i>,
-  birnima: <i class="far fa-trash-alt"></i>
+  action: <HiOutlinePencil/>,
+  birnima: <HiOutlineTrash/>
 },
 {
   id:9,
@@ -90,8 +92,8 @@ export const list =[ {
   kategoriya:'Lavash',
   price:"18,000 UZS",
   format:'kichkina',
-  action: <i class="fas fa-pencil-alt"></i>,
-  birnima: <i class="far fa-trash-alt"></i>
+  action: <HiOutlinePencil/>,
+  birnima: <HiOutlineTrash/>
 },
 {
   id:10,
@@ -100,8 +102,8 @@ export const list =[ {
   kategoriya:'Lavash',
   price:"18,000 UZS",
   format:'kichkina',
-  action: <i class="fas fa-pencil-alt"></i>,
-  birnima: <i class="far fa-trash-alt"></i>
+  action: <HiOutlinePencil/>,
+  birnima: <HiOutlineTrash/>
 },
 
 ]

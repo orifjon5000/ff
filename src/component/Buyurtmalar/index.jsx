@@ -1,5 +1,5 @@
 import React, { useEffect, useState,Suspense,lazy } from "react";
-import { Container, Navbar, AddPlus, Menu, Wrapper, Info } from "./style";
+import { Container, Navbar, AddPlus, Menu,FlexGrid, Wrapper, Info } from "./style";
 import { card } from "../../mock/card";
 import Flex from "./Flex";
 // import Drawer from "../Drawer/Drawer";
@@ -75,7 +75,7 @@ export const Index = ({value}) => {
           </Menu.V>
         </Menu>
       </Navbar>
-      <div>{isGrid ? <Flex isActive={isActive} /> : <Grid isActive={isActive}/>}</div>
+      <FlexGrid>{isGrid ? <Flex isActive={isActive} /> : <Grid isActive={isActive}/>}</FlexGrid>
     </Container>
   </Suspense>
   );

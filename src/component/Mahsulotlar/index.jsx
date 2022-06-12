@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Title, Wrapper } from "./style";
+import { Container, Title, Wrapper,Info } from "./style";
 import { list } from "../../mock/mahsulotlar.js";
 import Navbar from "./Navbar/Navbar.jsx";
 import { HiOutlinePencil, HiOutlineTrash } from "react-icons/hi";
@@ -7,6 +7,12 @@ import { HiOutlinePencil, HiOutlineTrash } from "react-icons/hi";
 export const Index = () => {
   const [isActive, setIsActive] = useState("Yangi");
   const [product, setProduct] = useState(list);
+  const Delete=(id)=>{
+    const NewData=product.filter((value) => value.id !== id)
+
+    setProduct(NewData)
+  }
+  
   return (
     <Container>
       <Navbar />
@@ -19,18 +25,24 @@ export const Index = () => {
         <p>Tahrirlash</p>
       </Title>
       {product.map((value) => (
-        <Wrapper className="flex-row" key={value.id}>
+        <div className="flex-row" key={value.id}>
          
-          <Wrapper.Column style={{width:'365px'}}> <img src={value.img} alt="" />{value.mahsulot}</Wrapper.Column>
-          <Wrapper.Column>{value.price}</Wrapper.Column>
-          <Wrapper.Column> {value.price}</Wrapper.Column>
-          <Wrapper.Column>{value.kategoriya}</Wrapper.Column>
-          <Wrapper.Column style={{width:'365px'}}>
-          <HiOutlinePencil className="ss" />
-          <HiOutlineTrash />
-          </Wrapper.Column>
-        </Wrapper>
+         <Info>
+              <image>
+                <img src={value.img} alt="" />
+              </image>
+              <h3>{value.mahsulot}</h3>
+              <h3>{value.kategoriya}</h3>
+              <h3>{value.price}</h3>
+              <h3>{value.format}</h3>
+              <action>{value.action}</action>
+              <delete onClick={()=>Delete(value.id)} >{value.birnima}</delete>
+              {/* <h1>{value.mahsulot}</h1> */}
+            </Info>
+
+        </div>
       ))}
+      <button onClick={() => setProduct(list)}>Reset</button>
     </Container>
   );
 };

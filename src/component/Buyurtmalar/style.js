@@ -13,13 +13,16 @@ height: 100vh;
 background: red;
 position: absolute;
 right: 800px;
-z-index:999
+z-index:999;
 `;
 export const Navbar = styled.div`
   display: flex;
   align-items: center;
+  width: 1600px;
   height: 70px;
   background: white;
+  position: fixed;
+  z-index: 9999;
 `;
 
 export const AddPlus = styled.div`
@@ -128,3 +131,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   margin: 0 10px;
 `;
+
+export const FlexGrid=styled.div`
+height:100vh;
+overflow:scroll`

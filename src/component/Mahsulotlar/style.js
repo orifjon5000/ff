@@ -30,26 +30,64 @@ export const Title = styled.div`
 
 export const Wrapper = styled.div`
   background: white;
-  margin: 25px 40px;
+  margin: 15px 40px;
   border-radius: 6px;
-  height: 36px;
+  height: 45px;
   font-family: sans-serif;
   justify-content: start;
 `;
-Wrapper.Column = styled.div`
-  width:  405px;
-  justify-content: center;
-  box-sizing: border-box;
-  padding-left: 30px;
-  border: 1px solid black;
 
+export const Info = styled.div`
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 7px 20px;
+  background: white;
+  box-shadow: 0px 20px 25px rgba(176, 177, 181, 0.432802);
+  border-radius: 6px;
+  height: fit-content;
+  /* width: 60rem; */
   img {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    width: 28px;
-    height: 28px;
-    margin-right: 8px;
+    margin: 10px 30px 10px 20px;
   }
-  .ss {
-    margin-left: 43px;
+  h3 {
+    width: 65px;
+    display: flex;
+    flex: 1;
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #2d3a45;
+  }
+  action {
+    border: 3px solid #edeff3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    padding: 1.5px;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  delete {
+    border: 3px solid #edeff3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    padding: 1.5px;
+    opacity: 0.8;
+    cursor: pointer;
+    margin-right: 85px;
+    margin-left: 25px;
   }
 `;
